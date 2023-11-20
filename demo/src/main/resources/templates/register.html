@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>結果画面</title>
+</head>
+<style>
+    /* 全体のスタイル */
+    body {
+      font-family: Arial, sans-serif; /* フォントファミリーを指定 */
+    }
+
+    /* blood,name(you)クラスのスタイル */
+    .you {
+      font-size: 36px; /* you クラスのテキストを大きくする */
+      color: black; /* you クラスのテキストの色を黒にする */
+    }
+  
+    /* fortune クラスのスタイル */
+    .fortune {
+      font-size: 48px; /* fortune クラスのテキストを大きくする */
+      color: red; /* fortune クラスのテキストの色を赤にする */
+    }
+
+    /* 画像のスタイル */
+.result-image {
+      width: 300px; /* 画像の幅を調整 */
+      height: auto; /* 高さを自動調整 */
+}
+  </style>
+<body>
+<h2>占い結果</h2>
+<strong class="you"th:text="${rb.blood}"></strong>型の
+<strong class="you"th:text="${rb.name}"></strong>さん！今日の運勢は...<br/>
+<strong class="fortune"th:text="${fortune}"></strong>です!!<br/><br/>
+<!-- もう一度占うボタン -->
+<form action="/" method="get">
+    <input type="submit" value="もう一度占う"/>
+</form>
+<!-- 画像の追加 -->
+<img class="result-image"src="/fortune2.jpg" alt="占いカバの画像">
+
+</body>
+</html>

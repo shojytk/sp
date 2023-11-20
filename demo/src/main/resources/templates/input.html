@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>入力画面</title>
+</head>
+<style>
+/* 全体のスタイル */
+body {
+      font-family: Arial, sans-serif; /* フォントファミリーを指定 */
+    }
+
+    /* blood,name(you)クラスのスタイル */
+    .fortune {
+      font-size: 24px; /* you クラスのテキストを大きくする */
+      color: black; /* you クラスのテキストの色を黒にする */
+    }
+
+/* 画像のスタイル */
+.result-image {
+      width: 400px; /* 画像の幅を調整 */
+      height: auto; /* 高さを自動調整 */
+}
+</style>
+<body>
+<h1>カバさんの占い館</h1>
+<h3>あなたについて教えてください。</h3>
+<form action="/register" method="post">
+    名前：<input type="text" name="name" size="10" /><br/>
+    血液型：<input type="checkbox" name="blood" value="A"/>A型
+    <input type="checkbox" name="blood" value="B"/>B型
+    <input type="checkbox" name="blood" value="AB"/>AB型
+    <input type="checkbox" name="blood" value="O"/>O型<br/><br/>
+    <input class="fortune"type="submit" value="占う" />
+    </form>
+
+    <!-- 画像の追加 -->
+    <img class="result-image"src="/fortune1.jpg" alt="占いの館の画像">
+
+</body>
+</html>
